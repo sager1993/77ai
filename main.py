@@ -1,10 +1,4 @@
-pip install chroma
-pip install langchain
-pip install cohere
-
 import os
-
- 
 from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.embeddings import CohereEmbeddings
@@ -14,6 +8,28 @@ from langchain.llms import Cohere
 from langchain.chains import VectorDBQA
 from langchain.document_loaders import TextLoader
 from dotenv import load_dotenv
+import sys
+import subprocess
+
+# implement pip as a subprocess:
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+                       'chroma'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+                       'langchain'])
+
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+                       'cohere'])
+
+
+# implement pip as a subprocess:
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+                       'chroma'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+                       'langchain'])
+
+subprocess.check_call([sys.executable, '-m', 'pip', 'install',
+                       'cohere'])
+
 
 load_dotenv()
 COHERE_API_KEY = os.environ.get("COHERE_API_KEY")
