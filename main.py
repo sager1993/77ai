@@ -1,4 +1,10 @@
+!pip install chroma
+!pip install langchain
+!pip install cohere
+
 import os
+
+ 
 from langchain.vectorstores import Chroma
 from langchain.embeddings import OpenAIEmbeddings
 from langchain.embeddings import CohereEmbeddings
