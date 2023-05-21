@@ -1,6 +1,6 @@
-!pip install chroma
-!pip install langchain
-!pip install cohere
+pip install chroma
+pip install langchain
+pip install cohere
 
 import os
 
